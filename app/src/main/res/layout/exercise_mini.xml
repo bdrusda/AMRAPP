@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:showIn="@layout/activity_main">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="10"
+            android:layout_marginTop="2dp"
+            android:background="@color/primary_light">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="15"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/exercise_logo" />
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="85">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="60"
+                            android:id="@+id/exercise_title"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="@color/secondary_dark"
+                            android:textSize="24dp"
+                            tools:text="Exercise Name" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:id="@+id/exercise_description"
+                            android:layout_below="@id/exercise_title"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:textColor="@color/secondary_dark"
+                            android:textSize="14dp"
+                            tools:text="Exercise Description" />
+                </RelativeLayout>
+        </LinearLayout>
+</merge>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:showIn="@layout/activity_main">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/menu"
+            android:paddingVertical="15dp"
+            android:paddingHorizontal="15dp"
+            android:layout_weight="1.5" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/x_icon"
+            android:layout_weight="3"
+            android:paddingHorizontal="20dp"
+            android:scaleType="fitXY" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:paddingVertical="15dp"
+            android:paddingHorizontal="10dp"
+            android:layout_weight="1.5" />
+</merge>
