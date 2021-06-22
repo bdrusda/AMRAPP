@@ -7,15 +7,12 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginLeft="10dp"
-            android:id="@+id/set_entry"
-            android:background="@color/primary_light">
+            android:id="@+id/set_entry">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="20"
                     android:textSize="14dp"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:textColor="@color/secondary_dark"
                     tools:text="1" />
                 <EditText
                     android:layout_width="match_parent"
@@ -23,8 +20,6 @@
                     android:layout_weight="40"
                     android:layout_marginRight="15dp"
                     android:textSize="14dp"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:textColor="@color/secondary_dark"
                     android:singleLine="true"
                     tools:text="10" />
                 <EditText
@@ -33,8 +28,6 @@
                     android:layout_weight="40"
                     android:layout_marginRight="15dp"
                     android:textSize="14dp"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:textColor="@color/secondary_dark"
                     android:singleLine="true"
                     tools:text="50" />
         </LinearLayout>

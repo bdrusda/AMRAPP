@@ -8,13 +8,17 @@
             android:orientation="horizontal"
             android:layout_weight="10"
             android:layout_marginTop="2dp"
-            android:background="@color/primary_light">
-                <ImageView
+            android:background="@drawable/rounded_header">
+                <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="15"
                     android:layout_marginRight="5dp"
-                    android:id="@+id/exercise_logo" />
+                    android:id="@+id/exercise_logo"
+                    android:text="E"
+                    android:autoSizeTextType="uniform"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal" />
                 <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -25,8 +29,6 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="60"
                             android:id="@+id/exercise_title"
-                            android:fontFamily="sans-serif-medium"
-                            android:textColor="@color/secondary_dark"
                             android:textSize="24dp"
                             tools:text="Exercise Name" />
                         <TextView
@@ -35,8 +37,6 @@
                             android:layout_weight="40"
                             android:id="@+id/exercise_description"
                             android:layout_below="@id/exercise_title"
-                            android:fontFamily="sans-serif-condensed-medium"
-                            android:textColor="@color/secondary_dark"
                             android:textSize="14dp"
                             tools:text="Exercise Description" />
                 </RelativeLayout>

@@ -7,23 +7,21 @@
             android:layout_width="match_parent"
             android:orientation="vertical"
             android:layout_weight="30"
-            android:layout_marginTop="2dp"
-            android:background="@color/primary_light">
+            android:layout_margin="5dp">
                 <LinearLayout
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:orientation="vertical">
-                    <include layout="@layout/exercise_mini"/>
-                    <include layout="@layout/set_info"/>
+                    android:orientation="vertical"
+                    android:layout_marginBottom="2dp">
+                    <include layout="@layout/exercise_mini" android:id="@+id/exercise_mini"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:orientation="vertical">
-                    <include layout="@layout/set_entry"/>
-                    <include layout="@layout/set_entry"/>
-                    <include layout="@layout/set_entry"/>
-                    <include layout="@layout/set_entry"/>
+                    android:orientation="vertical"
+                    android:paddingTop="3dp"
+                    android:background="@drawable/rounded_footer">
+                    <include layout="@layout/set_info"/>
                     <include layout="@layout/set_entry"/>
                     <Button
                         android:layout_height="0dp"
@@ -31,8 +29,8 @@
                         android:layout_weight="30"
                         android:layout_gravity="center"
                         android:layout_marginBottom="5dp"
-                        android:backgroundTint="@color/primary_dark"
-                        android:text="Add set"/>
+                        android:text="Add set"
+                        android:id="@+id/add_set"/>
                 </LinearLayout>
         </LinearLayout>
 </merge>
