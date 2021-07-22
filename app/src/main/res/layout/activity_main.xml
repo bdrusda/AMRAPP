@@ -3,17 +3,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/activityMain">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:id="@+id/header"
-        android:orientation="horizontal"
-        android:layout_weight="12"
-        android:background="@color/primary">
-        <include layout="@layout/header_section" />
-    </LinearLayout>
+    <include layout="@layout/header_section" />
+    <include layout="@layout/body_section" />
 
-    <include layout="@layout/workout_active" />
+    <!--
+    <include layout="@layout/workout_active" android:id="@+id/workoutActive"/>
+    -->
 </LinearLayout>

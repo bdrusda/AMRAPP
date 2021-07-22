@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    tools:showIn="@layout/activity_main">
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:orientation="vertical"
+    android:layout_weight="88">
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:id="@+id/body"
-        android:orientation="vertical"
-        android:layout_weight="88">
-
-        <ScrollView
+        android:layout_height="wrap_content">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@color/primary_light">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/primary_light"
+            android:id="@+id/exercise_section">
 
-                <include layout="@layout/exercise_medium" android:id="@+id/exer1"/>
-                <include layout="@layout/exercise_medium" android:id="@+id/exer2"/>
-                <include layout="@layout/exercise_medium" android:id="@+id/exer3"/>
-            </LinearLayout>
-        </ScrollView>
-    </LinearLayout>
-</merge>
+            <!--TODO this is where we are adding the exerciseView-->
+
+            <!--
+            <include layout="@layout/exercise_medium" android:id="@+id/exer1"/>
+            <include layout="@layout/exercise_medium" android:id="@+id/exer2"/>
+            <include layout="@layout/exercise_medium" android:id="@+id/exer3"/>
+            -->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    tools:showIn="@layout/activity_main">
-        <LinearLayout
-            android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:id="@+id/set_entry">
+        <TextView
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginLeft="10dp"
-            android:id="@+id/set_entry">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="20"
-                    android:textSize="14dp"
-                    tools:text="1" />
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="40"
-                    android:layout_marginRight="15dp"
-                    android:textSize="14dp"
-                    android:singleLine="true"
-                    tools:text="10" />
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="40"
-                    android:layout_marginRight="15dp"
-                    android:textSize="14dp"
-                    android:singleLine="true"
-                    tools:text="50" />
-        </LinearLayout>
-</merge>
+            android:layout_weight="20"
+            android:textSize="14dp"
+            android:id="@id/set_number"
+            tools:text="1" />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="40"
+            android:layout_marginRight="15dp"
+            android:textSize="14dp"
+            android:singleLine="true"
+            android:id="@id/reps"
+            tools:text="10" />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="40"
+            android:layout_marginRight="15dp"
+            android:textSize="14dp"
+            android:singleLine="true"
+            android:id="@+id/weight"
+            tools:text="50" />
+</LinearLayout>

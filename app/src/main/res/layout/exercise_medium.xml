@@ -1,36 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    tools:showIn="@layout/activity_main">
-        <LinearLayout
-            android:layout_height="0dp"
-            android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_weight="30"
-            android:layout_margin="5dp">
-                <LinearLayout
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:layout_marginBottom="2dp">
-                    <include layout="@layout/exercise_mini" android:id="@+id/exercise_mini"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:paddingTop="3dp"
-                    android:background="@drawable/rounded_footer">
-                    <include layout="@layout/set_info"/>
-                    <include layout="@layout/set_entry"/>
-                    <Button
-                        android:layout_height="0dp"
-                        android:layout_width="wrap_content"
-                        android:layout_weight="30"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="5dp"
-                        android:text="Add set"
-                        android:id="@+id/add_set"/>
-                </LinearLayout>
-        </LinearLayout>
-</merge>
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/activity_main"
+    android:layout_height="0dp"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="30"
+    android:layout_margin="5dp">
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="2dp">
+        <include layout="@layout/exercise_mini" android:id="@+id/exercise_mini"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="3dp"
+        android:background="@drawable/rounded_footer">
+        <include layout="@layout/set_section" android:id="@+id/set_section"/>
+    </LinearLayout>
+</LinearLayout>
