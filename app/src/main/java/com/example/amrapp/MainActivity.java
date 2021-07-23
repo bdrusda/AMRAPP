@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.example.amrapp.adapters.SetAdapter;
+import com.example.amrapp.entities.ExerciseMedium;
 import com.example.amrapp.entities.Set;
 import com.example.amrapp.views.ResizableListView;
 
@@ -30,40 +31,21 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout workoutView = (LinearLayout)getLayoutInflater().inflate(R.layout.workout_active, null, false);
         LinearLayout exerciseSection = workoutView.findViewById(R.id.exercise_section);
 
+        /*TODO so now we're going to create a WorkoutView class
+            and in that class we will have an add exercise button (we can temporarily start it with one)
+            and we'll set it up to add ExerciseMedium objects - like ExerciseMedium adds Set objects
+                so we'll probably need to create an ExerciseMediumAdapter and Holder as well
+                    actually it's a scroll view so will we?  maybe
+            Once that's done we'll be able to just create the WorkoutView here
+            and MainActivity will be a lot cleaner
+         */
+
+
         //Create a exerciseMedium
-        LinearLayout exerciseView = (LinearLayout)getLayoutInflater().inflate(R.layout.exercise_medium, null, false);
-        ResizableListView setList = exerciseView.findViewById(R.id.set_section).findViewById(R.id.set_list);
-
-
-
-        //TODO we want to create an arrayAdapter that takes setEntry
-        ArrayList<Set> setArrayList = new ArrayList<>();
-        setArrayList.add(new Set(1, 10, 50));
-        setArrayList.add(new Set(2, 5, 25));
-        setArrayList.add(new Set(3, 5, 2));
-        setArrayList.add(new Set(4, 8, 185));
-        setArrayList.add(new Set(5, 15, 135));
-
-        SetAdapter setAdapter = new SetAdapter(MainActivity.this, setArrayList);
-        setList.setAdapter(setAdapter);
-
-        Button addSet = exerciseView.findViewById(R.id.add_set);
-        addSet.setOnClickListener(v -> {
-            setArrayList.add(new Set(0, 0, 0));
-            setAdapter.notifyDataSetChanged();
-        });
-
-
-
-
-
-
-
-
-
+        ExerciseMedium exerciseMedium = new ExerciseMedium(this, "Barbell Bench");
 
         //Add the exerciseMedium
-        exerciseSection.addView(exerciseView);
+        exerciseSection.addView(exerciseMedium.getExerciseMedium());
 
         //Add the workoutView
         mainActivityBody.addView(workoutView);

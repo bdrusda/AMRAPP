@@ -14,10 +14,10 @@
                     android:layout_weight="15"
                     android:layout_marginRight="5dp"
                     android:id="@+id/exercise_logo"
-                    android:text="E"
                     android:autoSizeTextType="uniform"
                     android:textAlignment="center"
-                    android:gravity="center_horizontal" />
+                    android:gravity="center_horizontal"
+                    tools:text="E" />
                 <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"

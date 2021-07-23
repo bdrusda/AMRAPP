@@ -2,10 +2,14 @@ package com.example.amrapp.entities;
 
 public class Set {
     private int number;
-    private int reps;
-    private int weight;
+    private Integer reps;
+    private Integer weight;
 
-    public Set(int number, int reps, int weight) {
+    public Set(int number) {
+        this(number, null, null);
+    }
+
+    public Set(int number, Integer reps, Integer weight) {
         this.number = number;
         this.reps = reps;
         this.weight = weight;
@@ -20,15 +24,13 @@ public class Set {
     }
 
     public String getReps() {
-        return Integer.toString(reps);
+        return (reps != null) ? Integer.toString(reps) : "";
     }
 
-    public void setReps(int reps) {
-        this.reps = reps;
-    }
+    public void setReps(int reps) { this.reps = reps; }
 
     public String getWeight() {
-        return Integer.toString(weight);
+        return (weight != null) ? Integer.toString(weight) : "";
     }
 
     public void setWeight(int weight) {
