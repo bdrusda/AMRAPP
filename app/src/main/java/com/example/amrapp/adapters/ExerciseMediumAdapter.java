@@ -5,6 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,6 +17,7 @@ import com.example.amrapp.entities.ExerciseMedium;
 import com.example.amrapp.entities.Set;
 import com.example.amrapp.holders.ExerciseMediumHolder;
 import com.example.amrapp.holders.SetHolder;
+import com.example.amrapp.views.ResizableListView;
 
 import java.util.ArrayList;
 
@@ -30,30 +34,33 @@ public class ExerciseMediumAdapter extends ArrayAdapter<ExerciseMedium> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        View exercise = convertView;
+        View exerciseView = convertView;
         ExerciseMediumHolder holder = null;
 
         ExerciseMedium exerciseMedium = exercises.get(position);
 
-        if (exercise == null) {
-            exercise = LayoutInflater.from(getContext()).inflate(R.layout.exercise_medium, parent, false);
+        if (exerciseView == null) {
+            exerciseView = LayoutInflater.from(getContext()).inflate(R.layout.exercise_medium, parent, false);
 
             holder = new ExerciseMediumHolder();
-            holder.setLogo(exercise.findViewById(R.id.exercise_logo));
-            holder.setName(exercise.findViewById(R.id.exercise_name));
-            holder.setDescription(exercise.findViewById(R.id.exercise_description));
-            holder.setSets(exercise.findViewById(R.id.set_list));
-            exercise.setTag(holder);
+            holder.setLogo(exerciseView.findViewById(R.id.exercise_logo));
+            holder.setName(exerciseView.findViewById(R.id.exercise_name));
+            holder.setDescription(exerciseView.findViewById(R.id.exercise_description));
+            holder.setSets(exerciseView.findViewById(R.id.set_list));
+            exerciseView.setTag(holder);
         } else {
-            holder = (ExerciseMediumHolder)exercise.getTag();
+            holder = (ExerciseMediumHolder)exerciseView.getTag();
         }
 
+        // Set the Exercise Info
         holder.getLogo().setText(exerciseMedium.getName().substring(0,1));
         holder.getName().setText(exerciseMedium.getName());
         holder.getDescription().setText(exerciseMedium.getDescription());
-        //TODO we need to add the sets to the array adapter or something idk
-        holder.getSets()
+        holder.getSets().setAdapter(exerciseMedium.getSetAdapter());
 
-        return exercise;
+        // Initialize the Add Set Button
+        exerciseMedium.initializeAddSetButton(exerciseView.findViewById(R.id.add_set));
+
+        return exerciseView;
     }
 }

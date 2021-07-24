@@ -28,28 +28,28 @@ public class SetAdapter extends ArrayAdapter<Set> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        View setEntry = convertView;
+        View setView = convertView;
         SetHolder holder = null;
 
         Set set = setList.get(position);
 
-        if (setEntry == null) {
-            setEntry = LayoutInflater.from(getContext()).inflate(R.layout.set_entry, parent, false);
+        if (setView == null) {
+            setView = LayoutInflater.from(getContext()).inflate(R.layout.set_entry, parent, false);
 
             holder = new SetHolder();
-            holder.setSetNumber(setEntry.findViewById(R.id.set_number));
-            holder.setReps(setEntry.findViewById(R.id.reps));
-            holder.setWeight(setEntry.findViewById(R.id.weight));
+            holder.setSetNumber(setView.findViewById(R.id.set_number));
+            holder.setReps(setView.findViewById(R.id.reps));
+            holder.setWeight(setView.findViewById(R.id.weight));
 
-            setEntry.setTag(holder);
+            setView.setTag(holder);
         } else {
-            holder = (SetHolder)setEntry.getTag();
+            holder = (SetHolder)setView.getTag();
         }
 
         holder.getSetNumber().setText(set.getNumber());
         holder.getReps().setText(set.getReps());
         holder.getWeight().setText(set.getWeight());
 
-        return setEntry;
+        return setView;
     }
 }
