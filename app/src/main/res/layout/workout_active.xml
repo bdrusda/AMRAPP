@@ -7,24 +7,15 @@
     android:layout_height="0dp"
     android:orientation="vertical"
     android:layout_weight="88">
-
-    <ScrollView
+    <ListView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@color/primary_light"
-            android:id="@+id/exercise_section">
-
-            <!--TODO this is where we are adding the exerciseView-->
-
-            <!--
-            <include layout="@layout/exercise_medium" android:id="@+id/exer1"/>
-            <include layout="@layout/exercise_medium" android:id="@+id/exer2"/>
-            <include layout="@layout/exercise_medium" android:id="@+id/exer3"/>
-            -->
-        </LinearLayout>
-    </ScrollView>
+        android:layout_height="wrap_content"
+        android:id="@+id/exercise_list"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="5dp"
+        android:text="Add exercise"
+        android:id="@+id/add_exercise"/>
 </LinearLayout>
