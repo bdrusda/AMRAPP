@@ -17,11 +17,25 @@
         <include layout="@layout/exercise_mini" android:id="@+id/exercise_mini"/>
     </LinearLayout>
     <LinearLayout
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingTop="3dp"
-        android:background="@drawable/rounded_footer">
-        <include layout="@layout/set_section" android:id="@+id/set_section"/>
+        android:paddingLeft="10dp"
+        android:background="@drawable/rounded_footer"
+        android:id="@+id/set_section">
+
+        <include layout="@layout/set_info" android:id="@+id/set_info"/>
+        <com.example.amrapp.views.ResizableListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/set_list"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:text="Add set"
+            android:id="@+id/add_set"/>
     </LinearLayout>
 </LinearLayout>

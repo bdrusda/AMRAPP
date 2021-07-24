@@ -5,11 +5,46 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/activityMain">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:showIn="@layout/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/header"
+        android:orientation="horizontal"
+        android:layout_weight="10"
+        android:background="@color/primary">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/menu"
+            android:paddingVertical="15dp"
+            android:paddingHorizontal="15dp"
+            android:layout_weight="1.5" />
 
-    <include layout="@layout/header_section" />
-    <include layout="@layout/body_section" />
-
-    <!--
-    <include layout="@layout/workout_active" android:id="@+id/workoutActive"/>
-    -->
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/x_icon"
+            android:layout_weight="3"
+            android:paddingHorizontal="25dp"
+            android:scaleType="fitXY" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:paddingVertical="15dp"
+            android:paddingHorizontal="10dp"
+            android:layout_weight="1.5" />
+    </LinearLayout>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:showIn="@layout/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/body"
+        android:orientation="horizontal"
+        android:layout_weight="90"
+        android:background="@color/primary_light" />
 </LinearLayout>
