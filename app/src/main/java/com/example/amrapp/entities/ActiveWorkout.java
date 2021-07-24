@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.amrapp.R;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 public class ActiveWorkout {
     Context context;
 
-    LinearLayout workoutActive;
+    RelativeLayout workoutActive;
     LayoutInflater inflater;
     ArrayList<ExerciseMedium> exercises;
     ExerciseMediumAdapter exerciseMediumAdapter;
@@ -27,7 +28,7 @@ public class ActiveWorkout {
 
         // Create the Active Workout
         inflater = (LayoutInflater) context.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
-        this.workoutActive = (LinearLayout) inflater.inflate(R.layout.workout_active, null, false);
+        this.workoutActive = (RelativeLayout) inflater.inflate(R.layout.workout_active, null, false);
 
         // Create the Exercise List
         ListView exerciseSection = workoutActive.findViewById(R.id.exercise_list);
@@ -38,15 +39,15 @@ public class ActiveWorkout {
 
         // Create Add Exercise button
         Button addSet = workoutActive.findViewById(R.id.add_exercise);
-        addSet.setOnClickListener(v -> addSet());
+        addSet.setOnClickListener(v -> addExercise());
     }
 
-    private void addSet() {
-        exercises.add(new ExerciseMedium(context, "Barbell Bench"));
+    private void addExercise() {
+        exercises.add(new ExerciseMedium(context, "Barbell Bench", "bench press with olympic barbell"));
         exerciseMediumAdapter.notifyDataSetChanged();
     }
 
-    public LinearLayout getWorkoutActive() {
+    public RelativeLayout getWorkoutActive() {
         return workoutActive;
     }
 }

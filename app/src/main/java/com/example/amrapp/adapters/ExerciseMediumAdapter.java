@@ -39,21 +39,21 @@ public class ExerciseMediumAdapter extends ArrayAdapter<ExerciseMedium> {
             exercise = LayoutInflater.from(getContext()).inflate(R.layout.exercise_medium, parent, false);
 
             holder = new ExerciseMediumHolder();
-            /*
-            holder.setName(exercise.findViewById(R.id.set_number));
-            holder.setReps(setEntry.findViewById(R.id.reps));
-            holder.setWeight(setEntry.findViewById(R.id.weight));
-            */
+            holder.setLogo(exercise.findViewById(R.id.exercise_logo));
+            holder.setName(exercise.findViewById(R.id.exercise_name));
+            holder.setDescription(exercise.findViewById(R.id.exercise_description));
+            holder.setSets(exercise.findViewById(R.id.set_list));
             exercise.setTag(holder);
         } else {
             holder = (ExerciseMediumHolder)exercise.getTag();
         }
 
-        /*
-        holder.getSetNumber().setText(set.getNumber());
-        holder.getReps().setText(set.getReps());
-        holder.getWeight().setText(set.getWeight());
-         */
+        holder.getLogo().setText(exerciseMedium.getName().substring(0,1));
+        holder.getName().setText(exerciseMedium.getName());
+        holder.getDescription().setText(exerciseMedium.getDescription());
+        //TODO we need to add the sets to the array adapter or something idk
+        holder.getSets()
+
         return exercise;
     }
 }

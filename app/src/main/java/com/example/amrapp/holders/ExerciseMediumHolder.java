@@ -4,36 +4,45 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.amrapp.entities.Set;
+import com.example.amrapp.views.ResizableListView;
 
 import java.util.ArrayList;
 
 public class ExerciseMediumHolder {
-    String name;
-    String description;
-    ArrayList<Set> sets;
+    TextView logo;
+    TextView name;
+    TextView description;
+    ResizableListView sets;
 
-    public String getName() {
+    public TextView getLogo() {
+        return logo;
+    }
+
+    public void setLogo(TextView logo) {
+        this.logo = logo;
+    }
+
+    public TextView getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(TextView name) {
         this.name = name;
     }
 
-    public String getDescription() {
+    public TextView getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(TextView description) {
         this.description = description;
     }
 
-    public ArrayList<Set> getSets() {
+    public ResizableListView getSets() {
         return sets;
     }
 
-    public void setSets(ArrayList<Set> sets) {
+    public void setSets(ResizableListView sets) {
         this.sets = sets;
     }
-
 }

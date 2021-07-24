@@ -32,13 +32,15 @@ public class ExerciseMedium {
         this.name = name.trim();
         this.description = description;
 
+        //TODO so all of this info should be handled in the ExerciseMediumAdapter
+
         // Create the Exercise Medium
         inflater = (LayoutInflater) context.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
         this.exerciseMedium = (LinearLayout) inflater.inflate(R.layout.exercise_medium, null, false);
 
         // Set the Set Info
-        TextView exerciseTitle = exerciseMedium.findViewById(R.id.exercise_title);
-        exerciseTitle.setText(name);
+        TextView exerciseName = exerciseMedium.findViewById(R.id.exercise_name);
+        exerciseName.setText(name);
         TextView exerciseLogo = exerciseMedium.findViewById(R.id.exercise_logo);
         exerciseLogo.setText(name.substring(0,1));
 
@@ -59,6 +61,22 @@ public class ExerciseMedium {
     private void addSet() {
         sets.add(new Set(setNumber++));
         setAdapter.notifyDataSetChanged();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public LinearLayout getExerciseMedium() {
